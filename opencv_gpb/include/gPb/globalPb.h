@@ -2,7 +2,8 @@
 #include <vector>
 #include <math.h>
 #include <opencv/cv.h>
-#include <opencv/highgui.h>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
 #include <opencv2/core/core.hpp>
 
 namespace cv
@@ -11,11 +12,11 @@ void
 globalPb(const cv::Mat & image,
          cv::Mat & gPb,
          cv::Mat & gPb_thin,
-         vector<cv::Mat> & gPb_ori);
+         std::vector<cv::Mat> & gPb_ori);
 
 void
-pb_parts_final_selected(vector<cv::Mat> & layers,
-                        vector<vector<cv::Mat> > & gradients);
+pb_parts_final_selected(std::vector<cv::Mat> & layers,
+                        std::vector<std::vector<cv::Mat> > & gradients);
 
 void
 MakeFilter(const int radii,
@@ -25,5 +26,5 @@ MakeFilter(const int radii,
 void
 multiscalePb(const cv::Mat & image,
              cv::Mat & mPb_max,
-             vector<vector<cv::Mat> > & gradients);
+             std::vector<std::vector<cv::Mat> > & gradients);
 }

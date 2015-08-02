@@ -57,6 +57,10 @@ int main(int argc, char** argv) {
     cout<<"Press 'w' or 'ENTER' - conduct interactive segmentation"<<endl;
     cout<<"Press 'ESC' - exit the program"<<endl<<endl<<endl;
 
+    cv::namedWindow("ucm",cv::WINDOW_AUTOSIZE);
+    cv::namedWindow("example",cv::WINDOW_AUTOSIZE);
+    cv::namedWindow("ucm",cv::WINDOW_AUTOSIZE);
+
     cv::Mat img0, gPb_thin;
     cv::Mat gPb, ucm;
     vector<cv::Mat> gPb_ori;
