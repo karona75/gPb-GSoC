@@ -98,19 +98,19 @@ assert( 0 <= diff && diff <= 255 ); \
     dst = cvGetMat( dstarr, &dstub );
 
     if( CV_MAT_TYPE(src->type) != CV_8UC3 ) {
-        printf("Only 8-bit, 3-channel input images are supported");
+        std::cout<<"Only 8-bit, 3-channel input images are supported"<<std::endl;
         exit;
     }
     //CV_ERROR( CV_StsUnsupportedFormat, "Only 8-bit, 3-channel input images are supported" );
 
     if( CV_MAT_TYPE(dst->type) != CV_32SC1 ) {
-        printf("Only 32-bit, 1-channel output images are supported");
+        std::cout<<"Only 32-bit, 1-channel output images are supported"<<std::endl;
         exit;
     }
     //CV_ERROR( CV_StsUnsupportedFormat, "Only 32-bit, 1-channel output images are supported" );
 
     if( !CV_ARE_SIZES_EQ( src, dst )) {
-        printf("The input and output images must have the same size");
+        std::cout<<"The input and output images must have the same size"<<std::endl;
         exit;
     }
     //CV_ERROR( CV_StsUnmatchedSizes, "The input and output images must have the same size" );
