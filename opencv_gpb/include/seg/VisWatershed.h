@@ -7,8 +7,7 @@
 //
 
 #include <iostream>
-#include <opencv/cv.h>
-#include <opencv/highgui.h>
+#include <opencv2/highgui/highgui.hpp>
 
 typedef struct CvWSNode
 {
